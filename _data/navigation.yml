@@ -5,7 +5,7 @@ main:
    - title: "Category"
      url: /categories/
    - title: "Tag"
-   url: /tags/
+     url: /tags/
    - title: "Category1"
      url: /categories/category1/
   # - title: "Sample Posts"
