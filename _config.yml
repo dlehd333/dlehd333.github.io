@@ -19,8 +19,8 @@ locale                   : "en-US"
 title                    : "Spark"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "°³¹ßÁö¸Á»ı"
-description              : "°³¹ßÀÚ°¡ µÇ°í½ÍÀº °³¹ßÁö¸Á»ı"
+name                     : "ê°œë°œì§€ë§ìƒ"
+description              : "ê°œë°œìê°€ ë˜ê³ ì‹¶ì€ ê°œë°œì§€ë§ìƒ"
 url                      : "https://dlehd333.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "°³¹ßÁö¸Á»ı"
+  name             : "ê°œë°œì§€ë§ìƒ"
   avatar           : "/assets/images/bear.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "°³¹ßÀÚ°¡ µÇ°í½ÍÀº °³¹ßÁö¸Á»ı"
+  bio              : "ê°œë°œìê°€ ë˜ê³ ì‹¶ì€ ê°œë°œì§€ë§ìƒ"
   location         : "South Korea"
   email            :
   links:
