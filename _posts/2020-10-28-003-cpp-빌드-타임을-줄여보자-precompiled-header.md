@@ -7,11 +7,17 @@ tags:
   - compiled
   - build
 img1:
-  - image_path : ./image/3-1.png
+  - url : ./image/3-1.png
+    image_path : ./image/3-1.png
+    alt : "img1"
 img2:
-  - image_path : ./image/3-2.png
+  - url : ./image/3-2.png
+    image_path : ./image/3-2.png
+    alt : "img2"
 img3:
-  - image_path : ./image/3-3.png
+  - url : ./image/3-3.png
+    image_path : ./image/3-3.png
+    alt : "img3"
 ---
 **※ 주의 ※ 작성된 지 오래된 글입니다(2016.6) 이전 블로그에서 작성했던 글을 재가공한 것입니다. 출처는 하단에 표기했습니다.**
 
