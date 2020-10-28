@@ -1,0 +1,47 @@
+---
+title: "[C++]Multicharacter literals"
+categories:
+  - C++
+tags:
+  - char
+  - int
+  - literal
+---
+**※ 주의 ※ 작성된 지 오래된 글입니다(2016.6)이전 블로그에서 작성했던 글을 재가공한 것입니다. 출처는 하단에 표기했습니다.**
+
+---
+
+흔히 C언어에서 문자와 문자열에 대해 배울 때, 작은 따옴표( ' ' )는 문자를 나타내고, 큰 따옴표( " " )는 문자열을 나타낸다고 배운다. 그리고 그에 맞게 표기하지 않으면(작은 따옴표에 문자열을 넣는다거나) 잘못된 코드이고, 에러가 나는게 당연하다고 여겼다.
+
+그런데 VC++ 2013 커뮤니티 버젼을 쓰던 중, 저런 잘못을 했는데... 에러가 나지 않더라. 그래서 해당 내용을 조사해보니, 새로운 내용을 발견할 수 있었다.
+
+---
+
+[Microsoft Docs - 문자열 및 문자 리터럴(c++)](https://docs.microsoft.com/ko-kr/cpp/cpp/string-and-character-literals-cpp?view=vs-2019)
+
+해당 문서의 예제 코드중에 이런 부분이 있다.
+```cpp
+// Multicharacter literals
+auto m0 = 'abcd'; // int, value 0x61626364
+```
+해당 코드가 실행되면 10진수로 1633837924가 출력되고, 이는 16진수로 0x61626364이다. 이를 4개로 쪼개면, 0x61, 0x62, 0x63, 0x64이고, 이들 각각을 아스키 코드로 변환해보면 다음과 같이 나온다.
+
+|16진수|문자|
+|---|---|
+|0x61|'a'|
+|0x62|'b'|
+|0x63|'c'|
+|0x64|'d'|
+
+이렇게 작은 따옴표 사이에 char가 여러개 들어간 것을 multicharacter literal이라고 하고, int 타입으로 들어간다고 한다.
+
+그런데 C++ 표준 파일에서는, 그 값이 ```implementation-defined value```를 가진다고 한다. 이 말은 컴파일러마다 다른 값을 가질 수 있다는 것을 의미한다고 한다. 즉, 저 코드도 특정 컴파일러에서만 저렇게 작동한다는 것을 의미한다.
+
+컴파일러마다 다른 값을 가질 수 있는 기능이니, 웬만하면 사용하지 않는게 좋을 것 같다.
+
+---
+
+### <출처>
+- [hashcode - 작은따옴표 안에 문자 여러 개를 쓰는 경우](https://hashcode.co.kr/questions/237/%EC%9E%91%EC%9D%80%EB%94%B0%EC%98%B4%ED%91%9C-%EC%95%88%EC%97%90-%EB%AC%B8%EC%9E%90-%EC%97%AC%EB%9F%AC-%EA%B0%9C%EB%A5%BC-%EC%93%B0%EB%8A%94-%EA%B2%BD%EC%9A%B0)
+- [hashcode - multi character literal에 대해서](http://hashcode.co.kr/questions/237/%EC%9E%91%EC%9D%80%EB%94%B0%EC%98%B4%ED%91%9C-%EC%95%88%EC%97%90-%EB%AC%B8%EC%9E%90-%EC%97%AC%EB%9F%AC-%EA%B0%9C%EB%A5%BC-%EC%93%B0%EB%8A%94-%EA%B2%BD%EC%9A%B0)
+
